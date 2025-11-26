@@ -47,7 +47,7 @@
 
 2. Перейдите в Extensions
 
-3. Найдите C++ File Statistics
+3. Найдите [C++ File Stats](https://marketplace.visualstudio.com/items?itemName=morsio.vscode-cpp-stats)
 
 4. Установите расширение
 
