@@ -39,3 +39,11 @@
 
 # debug information files
 *.dwo
+
+# vscode files
+.vscode/
+*.vsix
+*.log
+tsconfig.json
+node_modules/
+versions/

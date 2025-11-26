@@ -1,0 +1,37 @@
+{
+    "name": "vscode-cpp-stats",
+    "displayName": "C++ File Stats",
+    "icon": "media/icon.png",
+    "description": "VS Code plugin showing C/C++ file statistics",
+    "version": "0.1.3",
+    "publisher": "morsio",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LMorsio/vscode-cpp-stats.git"
+    },
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "main": "./out/extension.js",
+    "scripts": {
+        "compile": "tsc -p .",
+        "watch": "tsc -w"
+    },
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.cppStats",
+                "title": "Analyze C/C++ file: Summary in new Tab"
+            }
+        ]
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "@types/node": "^18.0.0",
+        "@types/vscode": "^1.74.0"
+    }
+}
