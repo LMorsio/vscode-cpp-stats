@@ -43,6 +43,5 @@
 # vscode files
 .vscode/
 *.log
-tsconfig.json
 node_modules/
 out/
