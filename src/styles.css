@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100;
+    margin: 0;
+    background-color: #1f1f1f;
+    color: #333;
+}
+
+h1 {
+    color: #5f9ea0;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+pre {
+    font-size: 24px;
+    color: #cececeff;
+    background-color: #205d5f;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    overflow-x: auto;
+}

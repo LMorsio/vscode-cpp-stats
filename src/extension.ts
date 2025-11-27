@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { spawn } from 'child_process';
 import * as path from 'path';
+import * as fs from 'fs';
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -58,46 +59,26 @@ function showWebView(content: string) {
         {}
     );
 
-    panel.webview.html = `
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>C++ Statistics</title>
-        <style>
-            body {
-                font-family: sans-serif;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 100;
-                margin: 0;
-                background-color: #1f1f1f;
-                color: #333;
-            }
-            h1 {
-                color: #5f9ea0;
-                font-size: 48px;
-                margin-bottom: 20px;
-            }
-            pre {
-                font-size: 24px;
-                color: #cececeff;
-                background-color: #205d5f;
-                padding: 20px;
-                border-radius: 8px;
-                max-width: 90%;
-                overflow-x: auto;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>C++ File Statistics</h1>
-        <pre>${content}</pre>
-    </body>
-    </html>
-    `;
+    const origin = vscode.extensions.getExtension('morsio.vscode-cpp-stats')!.extensionPath;
 
+    const htmlPath = path.join(
+        origin,
+        'src',
+        'summary.html'
+    );
+
+    const cssPath = vscode.Uri.file(
+        path.join(origin, "src", "styles.css")
+    );
+
+    const cssUri = panel.webview.asWebviewUri(cssPath);
+    
+    let html = fs.readFileSync(htmlPath, 'utf8');
+
+    html = html.replace("{{stats}}", content);
+    html = html.replace("{{styles.css}}", cssUri.toString());
+
+    panel.webview.html = html;
 }
 
 export function deactivate() {}
