@@ -18,6 +18,8 @@ All notable changes to the "vscode-cpp-stats" extension will be documented in th
 
 **v.0.1.4** Implement functions counting features / enhance look and feel
 
+**v.0.1.5** some minor changes (see v.0.1.4)
+
 ---
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
