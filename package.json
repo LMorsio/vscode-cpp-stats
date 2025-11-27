@@ -3,7 +3,7 @@
     "displayName": "C++ File Stats",
     "icon": "media/icon.png",
     "description": "VS Code plugin showing C/C++ file statistics",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "publisher": "morsio",
     "license": "MIT",
     "repository": {

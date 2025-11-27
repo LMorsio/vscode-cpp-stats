@@ -16,4 +16,8 @@ All notable changes to the "vscode-cpp-stats" extension will be documented in th
 
 **v.0.1.3** Update favicon
 
+**v.0.1.4** Implement functions counting features / enhance look and feel
+
+---
+
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
